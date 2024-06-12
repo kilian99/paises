@@ -2,7 +2,7 @@ from flask import Flask
 
 import mysql.connector
 
-# db = list()
+# Conectarse con la base de datos
 db = mysql.connector.connect( # LLAMAMOS AL FUNCION CONNECT PARA CONECTARNOS
     host ='informatica.iesquevedo.es',
     port = 3333,
@@ -12,7 +12,7 @@ db = mysql.connector.connect( # LLAMAMOS AL FUNCION CONNECT PARA CONECTARNOS
 )
 
 
-
+# Importar las rutas
 def create_app():
     app = Flask(__name__)
     app.debug = True
